@@ -88,3 +88,16 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+int
+sys_add_path(char* path){
+    //Check if exists in the path array.
+    int i;
+    for(i=0;i<MAX_PATH_ENTRIES;i++){
+      if(i == 0){
+	pathArray[i] = path;
+	return 0;
+      }
+    }
+    return -1;
+}

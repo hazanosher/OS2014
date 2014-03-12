@@ -18,6 +18,7 @@
 *.app
 
 #All Qemu files
+*~
 _cat
 _echo
 _forktest

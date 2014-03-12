@@ -423,3 +423,10 @@ sys_pipe(void)
   fd[1] = fd1;
   return 0;
 }
+
+//Only God knows whats need to be written here.
+int
+sys_add_path(void){
+  //TODO: Implement.
+  return 1;
+}

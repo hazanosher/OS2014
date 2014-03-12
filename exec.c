@@ -18,8 +18,21 @@ exec(char *path, char **argv)
   struct proghdr ph;
   pde_t *pgdir, *oldpgdir;
 
-  if((ip = namei(path)) == 0)
+  if((ip = namei(path)) == 0){
+    //Check if exists in the path array.
+    for(i=0;i<MAX_PATH_ENTRIES;i++){
+      if((ip = namei(pathArray[i])) == 0){
+	cprintf("Yey1");
+      }
+      else {
+	cprintf("Yey2");
+      }
+    }
+  }
+  //Check if file found - if not, exit.
+  if(ip == 0){
     return -1;
+  }
   ilock(ip);
   pgdir = 0;
 

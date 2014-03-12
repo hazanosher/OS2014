@@ -75,3 +75,6 @@ struct proc {
 //   original data and bss
 //   fixed-size stack
 //   expandable heap
+
+#define MAX_PATH_ENTRIES 10
+char *pathArray[] = {0,0,0,0,0,0,0,0,0,0};
